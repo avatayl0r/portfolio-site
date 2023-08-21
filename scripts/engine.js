@@ -43,7 +43,7 @@ function animate() {
 }
 
 var model;
-const winston = "./public/models/winston.gltf";
+const winston = "./models/winston.gltf";
 drawLight();
 drawScene(winston);
 animate(model);
