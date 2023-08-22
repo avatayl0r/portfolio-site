@@ -31,11 +31,5 @@ function createBlogElement(title, content, img, ref) {
 createBlogElement(
     "Hello, World!",
     "I have created my first website from scratch using HTML, CSS, and JavaScript. This site also makes use of the three.js framework for 3D rendering of models.",
-    "./images/blog-cover001.jpg",
-    "./blogs/blog-test.html");
-
-createBlogElement(
-    "Blog Test",
-    "This is a brief overview of the blog topic. This will help to inform the user as to the rough idea of the topic of the blog before clicking and proceeding to the blog.",
-    "./images/blog-cover001.jpg",
-    "./blogs/blog-test.html");
+    "./images/blog_cover001.jpg",
+    "./blogs/blog-hello-world.html");

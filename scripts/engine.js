@@ -15,13 +15,13 @@ camera.position.y = 0;
 camera.position.x = 0;
 camera.position.z = 10;
 
-function drawLight() {
+export function drawLight() {
     const light = new THREE.DirectionalLight( 0xffffff, 1 );
     light.position.set(2,2,5);
     scene.add( light );
 }
 
-function drawScene(sceneFile) {
+export function drawScene(sceneFile) {
     const loader = new GLTFLoader();
     loader.load(sceneFile, function(gltfScene) {
         console.log(gltfScene);
@@ -35,15 +35,11 @@ function drawScene(sceneFile) {
     });
 }
 
-function animate() {
+export function animate() {
     requestAnimationFrame(animate);
     model.rotation.x += 0.01;
     model.rotation.y += 0.01;
     renderer.render(scene,camera);
 }
 
-var model;
-const winston = "./models/winston.gltf";
-drawLight();
-drawScene(winston);
-animate(model);
+export var model;
