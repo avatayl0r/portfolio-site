@@ -1,4 +1,4 @@
-function createBlogElement(title, content, img, ref) {
+function createBlogElement(title, authorMetadata, content, img, ref) {
     var blogFeed = document.getElementById("blog-feed");
     var blog = document.createElement("div");
     blog.classList.add("blog");
@@ -9,6 +9,10 @@ function createBlogElement(title, content, img, ref) {
     var blogTitle = document.createElement("h2");
     var blogTitleText = document.createTextNode(title);
     blogTitle.appendChild(blogTitleText);
+
+    var blogData = document.createElement("h4");
+    var blogDataText = document.createTextNode(authorMetadata);
+    blogData.appendChild(blogDataText);
 
     var blogImgContainer = document.createElement("div");
     blogImgContainer.classList.add("blog-img-container");
@@ -23,6 +27,7 @@ function createBlogElement(title, content, img, ref) {
     blogDesc.appendChild(blogDisplay);
 
     blog.appendChild(blogTitle);
+    blog.appendChild(blogData);
     blog.appendChild(blogImgContainer);
     blog.appendChild(blogDesc);
     blogFeed.appendChild(blog);
@@ -30,6 +35,7 @@ function createBlogElement(title, content, img, ref) {
 
 createBlogElement(
     "Hello, World!",
-    "I have created my first website from scratch using HTML, CSS, and JavaScript. This site also makes use of the three.js framework for 3D rendering of models.",
-    "./images/blog_cover001.jpg",
-    "./blogs/blog-hello-world.html");
+    "By Aryn Taylor @ 11:04PM | 24.08.2023",
+    "Hello, World! This is my portfolio site, and my first ever feature complete site built from scratch using JavaScript, NodeJS, ThreeJS, HTML, and CSS.",
+    "./images/blog_cover001.png",
+    "./blog/hello-world.html");

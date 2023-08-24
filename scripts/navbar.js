@@ -13,8 +13,19 @@ function createNavBarElement(name, ref) {
     nbar.appendChild(element);
 }
 
-createNavBarElement("Home", "./index.html");
-createNavBarElement("About Me", "./aboutme.html");
-createNavBarElement("Projects", "./projects.html");
-createNavBarElement("Resume", "./resume.html");
-createNavBarElement("Blog", "./blog.html");
+var loc = window.location.pathname;
+var dir = loc.substring(0, loc.lastIndexOf('/'));
+console.log(dir);
+if (dir == "") {
+    createNavBarElement("Home", "./index.html");
+    createNavBarElement("About Me", "./aboutme.html");
+    createNavBarElement("Projects", "./projects.html");
+    createNavBarElement("Resume", "./resume.html");
+    createNavBarElement("Blog", "./blog.html");
+} else {
+    createNavBarElement("Home", "../index.html");
+    createNavBarElement("About Me", "../aboutme.html");
+    createNavBarElement("Projects", "../projects.html");
+    createNavBarElement("Resume", "../resume.html");
+    createNavBarElement("Blog", "../blog.html");
+}
