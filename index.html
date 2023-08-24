@@ -3,7 +3,8 @@
   <head>
     <title>Home | Aryn Taylor</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="icon" type="image/x-icon" href="public/images/icon.jpg">
+    <link rel="icon" type="image/x-icon" href="./images/icon.jpg">
+    <script type="text/javascript" src="scripts/navbar.js" defer></script>
     <script type="text/javascript" src="scripts/sticky.js"></script>
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
@@ -15,19 +16,12 @@
       }
     </script>
     <script type="module" src="scripts/engine.js"></script>
+    <script type="module" src="scripts/index_models.js"></script>
   </head>
   <body>
     <div id="top"></div>
     <div class="sticky" id="nav-bar">
-      <ul class="nbar">
-	      <li class="nbar-el">
-          <a class="nbar-el-a" href="index.html">Home</a></li>
-	      <li class="nbar-el">
-          <a class="nbar-el-a" href="resume.html">Resume</a></li>
-	      <li class="nbar-el">
-          <a class="nbar-el-a" href="aboutme.html">About Me</a></li>
-	      <li class="nbar-el">
-          <a class="nbar-el-a" href="projects.html">Projects</a></li>
+      <ul class="nbar" id="nbar">
       </ul>
     </div>
     <div id="header-name">
@@ -35,10 +29,14 @@
       <p>Pipeline Developer (SWE) @ Oliver Agency</p>
       <hr>
     </div>
+    <div class="btn-container">
+      <button class="btn" id="btn-mdl-prev"><== Previous Model</button>
+      <button class="btn" id="btn-mdl-next">Next Model ==></button>
+    </div>
     <div id="viewport"></div>
     <div class="footer" id="footer-section">
         <a href="#top">
-          <img class="footer-arrow" src="public/images/arrows.png">
+          <img class="footer-arrow" src="./images/arrows.png">
         </a>
         <p>Go To Top</p>
         <hr>

@@ -22,10 +22,33 @@ h1,h2,h3,h4,h5,h6,ul,p {
     text-align: center;
 }
 
+#blog-feed {
+    width: 50%;
+}
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    width: 25%;
+    height: 25%;
+    background-color: #333;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    width: 25%;
+    height: 25%;
+    background-color: black;
+    color: white;
 }
 
 .nbar {
@@ -112,5 +135,18 @@ h1,h2,h3,h4,h5,h6,ul,p {
 }
 
 .project-img-container {
+    text-align: center;
+}
+
+.blog {
+    cursor: pointer;
+}
+
+.blog-img {
+    height: 50%;
+    width: 50%;
+}
+
+.blog-img-container {
     text-align: center;
 }
