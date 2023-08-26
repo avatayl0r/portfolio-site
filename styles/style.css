@@ -150,3 +150,10 @@ h1,h2,h3,h4,h5,h6,ul,p {
 .blog-img-container {
     text-align: center;
 }
+
+.aboutme-img {
+    width: 25%;
+    height: 25%;
+    border: white;
+    border-style: inset;
+}
