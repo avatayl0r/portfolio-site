@@ -11,17 +11,20 @@ function createProjectElement(title, authorMetadata, content, img, ref) {
     let projectDataText = document.createTextNode(authorMetadata);
     projectData.appendChild(projectDataText);
 
-    let projectImgContainer = document.createElement("div");
-    projectImgContainer.classList.add("project-img-container");
-
-    let projectImg = new Image();
-    projectImg.src = img;
-    projectImg.classList.add("project-img");
-    projectImgContainer.appendChild(projectImg);
-
     project.appendChild(projectTitle);
     project.appendChild(projectData);
-    project.appendChild(projectImgContainer);
+
+    if (img) {
+        let projectImgContainer = document.createElement("div");
+        projectImgContainer.classList.add("project-img-container");
+
+        let projectImg = new Image();
+        projectImg.src = img;
+        projectImg.classList.add("project-img");
+        projectImgContainer.appendChild(projectImg);
+
+        project.appendChild(projectImgContainer);
+    }
 
     let paragraphs = content.split("<br>")
     for (let idx = 0; idx < paragraphs.length; idx++) {
@@ -54,15 +57,15 @@ function createProjectElement(title, authorMetadata, content, img, ref) {
 createProjectElement(
     "digiwatch mk. i - Digital Watch",
     "(Active) August 2023 - Present",
-    "I am creating my first ever combination of hardware (electronics) and software. This I decided would be an extremely affordable and performant digital watch.<br>As this is my first time combining both hardware and software, I predict this will be an ongoing project for a while, however I really am looking forward to updating people on it's progress, and eventually releasing it.",
-    "./images/watch.png",
+    "I am creating my first ever combination of hardware (electronics) and software (program using C++). This I decided would be a cheap, easy-to-use, and performant digital watch.<br>As this is my first time combining both hardware and software, I predict this will be an ongoing project for a while, however I really am looking forward to updating people on it's progress, and eventually releasing it.",
+    "./images/watch.jpg",
     "");
 
 createProjectElement(
     "ggf - Web Browser",
     "(Active) August 2023 - Present",
     "I am creating a web browser from scratch. This I thought would be an interesting exercise in both understanding how a web browser works, and simultaneously building a web browser that suits my needs better as a programmer.<br>This is an ongoing project, and is being posted to my GitHub page if you are interested in seeing my progress.",
-    "./images/browser.png",
+    "",
     "");
 
 createProjectElement(
