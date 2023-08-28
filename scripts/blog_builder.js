@@ -2,9 +2,6 @@ function createBlogElement(title, authorMetadata, content, img, ref) {
     var blogFeed = document.getElementById("blog-feed");
     var blog = document.createElement("div");
     blog.classList.add("blog");
-    blog.onclick = function() {
-        window.location = ref;
-    }
 
     var blogTitle = document.createElement("h2");
     var blogTitleText = document.createTextNode(title);
@@ -14,28 +11,61 @@ function createBlogElement(title, authorMetadata, content, img, ref) {
     var blogDataText = document.createTextNode(authorMetadata);
     blogData.appendChild(blogDataText);
 
-    var blogImgContainer = document.createElement("div");
-    blogImgContainer.classList.add("blog-img-container");
-
-    var blogImg = new Image();
-    blogImg.src = img;
-    blogImg.classList.add("blog-img");
-    blogImgContainer.appendChild(blogImg);
-
-    var blogDesc = document.createElement("p");
-    var blogDisplay = document.createTextNode(content);
-    blogDesc.appendChild(blogDisplay);
-
     blog.appendChild(blogTitle);
     blog.appendChild(blogData);
-    blog.appendChild(blogImgContainer);
-    blog.appendChild(blogDesc);
+
+    if (img) {
+        let blogImgContainer = document.createElement("div");
+        blogImgContainer.classList.add("blog-img-container");
+
+        let blogImg = new Image();
+        blogImg.src = img;
+        blogImg.classList.add("blog-img");
+        blogImgContainer.appendChild(blogImg);
+
+        blog.appendChild(blogImgContainer);
+    }
+
+    let paragraphs = content.split("<br>");
+    for (let idx = 0; idx < paragraphs.length; idx++) {
+        let blogDesc = document.createElement("p");
+        let blogDisplay = document.createTextNode(paragraphs[idx]);
+        blogDesc.appendChild(blogDisplay);
+        blog.appendChild(blogDesc);
+    }
+
+    if (ref) {
+        let btnAnchor = document.createElement("div");
+        btnAnchor.classList.add("btn-lrg-anchor");
+        let btnContainer = document.createElement("div");
+        btnContainer.classList.add("btn-lrg-container");
+        let btn = document.createElement("button");
+        let btnText = document.createTextNode(title);
+        btn.appendChild(btnText);
+        btn.classList.add("btn-lrg");
+
+        btn.onclick = function() {
+            window.location = ref;
+        }
+
+        btnContainer.appendChild(btn);
+        btnAnchor.appendChild(btnContainer);
+        blog.appendChild(btnAnchor);
+    }
+
     blogFeed.appendChild(blog);
 }
 
 createBlogElement(
-    "Hello, World!",
+    "a fresh perspective",
+    "By Aryn Taylor @ 16:55PM | 28.08.2023",
+    "After recieving some feedback, and also noting some of my personal areas for improving the website, I went forth and made some new changes!<br>This includes new and improved button styling, a more browser-safe (and pretty cool) font, and some backend changes to improve the site's scalability and modularity for future changes.",
+    "./images/blog_cover002.png",
+    "./blog/a-fresh-perspective.html");
+
+createBlogElement(
+    "hello, world!",
     "By Aryn Taylor @ 11:04PM | 24.08.2023",
-    "Hello, World! This is my portfolio site, and my first ever feature complete site built from scratch using JavaScript, NodeJS, ThreeJS, HTML, and CSS.",
+    "This is my portfolio site, and my first ever feature complete site built from scratch using JavaScript, NodeJS, ThreeJS, HTML, and CSS.",
     "./images/blog_cover001.png",
     "./blog/hello-world.html");
