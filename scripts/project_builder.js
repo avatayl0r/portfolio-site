@@ -35,24 +35,34 @@ function createProjectElement(title, authorMetadata, content, img, ref) {
     }
 
     if (ref) {
+        let btnAnchor = document.createElement("div");
+        btnAnchor.classList.add("btn-lrg-anchor")
         let btnContainer = document.createElement("div");
-        btnContainer.classList.add("btn-container");
+        btnContainer.classList.add("btn-lrg-container");
         let btn = document.createElement("button");
         let btnText = document.createTextNode(title);
         btn.appendChild(btnText);
-        btn.classList.add("btn");
+        btn.classList.add("btn-lrg");
 
         btn.onclick = function() {
-            window.location = ref;
+            window.open(ref, "_blank");
         }
 
         btnContainer.appendChild(btn);
-        project.appendChild(btnContainer);
+        btnAnchor.appendChild(btnContainer);
+        project.appendChild(btnAnchor);
     }
     let hLine = document.createElement("hr");
     project.appendChild(hLine);
     projectFeed.appendChild(project);
 }
+
+createProjectElement(
+    "qpi - Quick Project Initialiser Tool",
+    "(Active) August 2023 - Present",
+    "QPI is a simple and efficient command-line utility designed to greatly speed-up the process of setting up projects.<br>This tool aims to save you time and effort by automating the initial project setup, so you can focus on what really matters - writing code.<br>Feel free to download and use it for your own projects!",
+    "./images/qpi.png",
+    "https://github.com/aryntaylor/qpi-tool");
 
 createProjectElement(
     "digiwatch mk. i - Digital Watch",
