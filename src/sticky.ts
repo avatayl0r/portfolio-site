@@ -7,7 +7,7 @@ if(header) {
 }
 
 function stickyHandler() {
-    if(window.pageYOffset > sticky) {
+    if(window.scrollY > sticky) {
         header.classList.add("sticky");
     } else{
         if(header) {

@@ -1,4 +1,4 @@
-function createBlogElement(title, authorMetadata, content, img, ref) {
+function createBlogElement(title: string, authorMetadata: string, content: string, img: string, ref: string) {
     var blogFeed = document.getElementById("blog-feed");
     var blog = document.createElement("div");
     blog.classList.add("blog");
@@ -45,7 +45,7 @@ function createBlogElement(title, authorMetadata, content, img, ref) {
         btn.classList.add("btn-lrg");
 
         btn.onclick = function() {
-            window.location = ref;
+            window.location.href = ref;
         }
 
         btnContainer.appendChild(btn);
