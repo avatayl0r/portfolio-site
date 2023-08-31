@@ -1,4 +1,5 @@
 import * as THREE from "three";
+//@ts-ignore
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
 
 export var model;
@@ -56,6 +57,7 @@ export function animate() {
     }
     requestAnimationFrame(animate);
     isAnimating = true;
+    if (model == undefined) {return;}
     model.rotation.x += 0.01;
     model.rotation.y += 0.01;
     renderer.render(scene,camera);

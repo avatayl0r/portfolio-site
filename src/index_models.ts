@@ -1,6 +1,6 @@
-import { drawLight, drawScene, animate, model, sceneInit, clearScene } from "./engine.js"
+import { drawLight, drawScene, animate, sceneInit, clearScene } from "./engine.js"
 
-function randomRender(idx) {
+function randomRender(idx: number) {
     switch (idx) {
         case 0:
             selectedModel = "./models/winston.gltf";
@@ -14,12 +14,12 @@ function randomRender(idx) {
     }
 }
 
-function loadModel(idx) {
+function loadModel(idx: number) {
     sceneInit();
     randomRender(idx);
     drawLight();
     drawScene(selectedModel);
-    animate(model);
+    animate();
 }
 
 function previousModel() {
@@ -45,12 +45,12 @@ var maxIdx = 2;
 var currentIdx = Math.floor(Math.random() * (maxIdx + 1));
 
 let btnPrevModel = document.getElementById("btn-mdl-prev");
-btnPrevModel.addEventListener("click", event => {
+btnPrevModel.addEventListener("click", _event => {
     previousModel();
 });
 
 let btnNextModel = document.getElementById("btn-mdl-next");
-btnNextModel.addEventListener("click", event => {
+btnNextModel.addEventListener("click", _event => {
     nextModel();
 });
 

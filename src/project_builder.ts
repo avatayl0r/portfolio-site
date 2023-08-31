@@ -1,4 +1,4 @@
-function createProjectElement(title, authorMetadata, content, img, ref) {
+function createProjectElement(title: string, authorMetadata: string, content: string, img: string, ref: string) {
     let projectFeed = document.getElementById("projects");
     let project = document.createElement("div");
     project.classList.add("project");

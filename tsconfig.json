@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "ES6",
+        "target": "es5",
+        "allowJs": true,
+        "outDir": "./build",
+        "moduleResolution": "classic",
+        "noUnusedLocals": false,
+    },
+    "include":
+    [
+        "src/**/*.ts",
+        "tests/**/*.ts"
+, "src/index_models.js", "src/engine.js"    ],
+    "exclude":
+    [
+        "node_modules",
+        ".vscode"
+    ]
+}
