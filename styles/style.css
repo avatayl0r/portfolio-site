@@ -3,9 +3,10 @@ html {
 }
 
 body {
-    font-family: 'Courier New', monospace;
-    color: white;
-    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-stretch: condensed;
+    color: rgb(0, 0, 0);
+    background-color: rgb(235, 235, 235);
 }
 
 h1,h2,h3,h4,h5,h6,ul,p {
@@ -13,9 +14,14 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin-left: 25%;
 }
 
-#header-name {
-    line-height: 0px;
-    margin-top: 100px;
+.header-container {
+    background-color: rgb(235, 235, 235);
+    margin-top: 5%;
+}
+
+.header-text {
+    text-align: center;
+    line-height: 15px;
 }
 
 #viewport {
@@ -40,7 +46,7 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(235, 235, 235);
 }
 
 .nbar-el {
@@ -49,14 +55,19 @@ h1,h2,h3,h4,h5,h6,ul,p {
 
 .nbar-el-a {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
+.nbar-el-a-img {
+    margin-top: 5px;
+    max-height: 35px;
+}
+
 .nbar-el-a:hover {
-    background-color: #111;
+    text-decoration: underline;
 }
 
 .footer {
@@ -65,7 +76,6 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
 }
 
 .footer-title {
@@ -75,6 +85,7 @@ h1,h2,h3,h4,h5,h6,ul,p {
 .footer-arrow {
     width: 10%;
     height: 10%;
+    color: rgb(0, 0, 0);
 }
 
 .footer-el {
@@ -84,14 +95,14 @@ h1,h2,h3,h4,h5,h6,ul,p {
 
 .footer-el-a {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .footer-el-a:hover {
-    background-color: #111;
+    text-decoration: underline;
 }
 
 .column {
@@ -125,9 +136,18 @@ h1,h2,h3,h4,h5,h6,ul,p {
     text-align: center;
 }
 
+.aboutme-img-container {
+    text-align: center;
+}
+
 .aboutme-img {
     width: 25%;
     height: 25%;
     border: white;
     border-style: inset;
+}
+
+#motd-holder {
+    text-align: center;
+    color: rgb(84, 84, 84);
 }

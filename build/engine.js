@@ -10,7 +10,8 @@ var isAnimating;
 export function sceneInit() {
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    renderer = new THREE.WebGLRenderer();
+    renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setClearColor(0xffffff, 0);
     container = document.getElementById("viewport");
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -51,7 +52,6 @@ export function animate() {
     if (model == undefined) {
         return;
     }
-    model.rotation.x += 0.01;
     model.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
