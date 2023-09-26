@@ -57,14 +57,21 @@ function createBlogElement(title: string, authorMetadata: string, content: strin
 }
 
 createBlogElement(
-    "a fresh perspective",
+    "New Coat Of Paint",
+    "By Aryn Taylor @ 20:05PM | 26.09.2023",
+    "After recieving some feedback, and also noting some of my personal areas for improving the website, I went forth and made some new changes!<br>This includes new and improved button styling, a more browser-safe (and pretty cool) font, and some backend changes to improve the site's scalability and modularity for future changes.",
+    "./images/blog_cover002.png",
+    "./blog/new-coat-of-paint.html");
+
+createBlogElement(
+    "A Fresh Perspective",
     "By Aryn Taylor @ 16:55PM | 28.08.2023",
     "After recieving some feedback, and also noting some of my personal areas for improving the website, I went forth and made some new changes!<br>This includes new and improved button styling, a more browser-safe (and pretty cool) font, and some backend changes to improve the site's scalability and modularity for future changes.",
     "./images/blog_cover002.png",
     "./blog/a-fresh-perspective.html");
 
 createBlogElement(
-    "hello, world!",
+    "Hello, World!",
     "By Aryn Taylor @ 11:04PM | 24.08.2023",
     "This is my portfolio site, and my first ever feature complete site built from scratch using JavaScript, NodeJS, ThreeJS, HTML, and CSS.",
     "./images/blog_cover001.png",
