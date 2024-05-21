@@ -11,6 +11,12 @@ class GalleryElement {
 
         this.createGalleryElement = function() {
             var gallery = document.getElementById("model-feed");
+
+            if (gallery === null) {
+                console.error("Model feed section not found.");
+                return;
+            }
+
             var model = document.createElement("div");
             model.classList.add("model");
 

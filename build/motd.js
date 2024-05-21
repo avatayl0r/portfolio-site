@@ -1,3 +1,4 @@
+"use strict";
 function randomMotd(idx) {
     switch (idx) {
         case 0:
@@ -29,6 +30,10 @@ function randomMotd(idx) {
 function loadMotd(idx) {
     randomMotd(idx);
     var container = document.getElementById("motd-holder");
+    if (container === null) {
+        console.error("MOTD section not found.");
+        return;
+    }
     var motdHolder = document.createElement("p");
     var motdHolderText = document.createTextNode(motd);
     var motdAuthorHolder = document.createElement("p");

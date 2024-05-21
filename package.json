@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "serve": "^14.2.0",
+    "serve": "^14.2.3",
     "source-map-loader": "^4.0.1",
+    "start": "^5.1.0",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2"
   },

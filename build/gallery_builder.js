@@ -1,3 +1,4 @@
+"use strict";
 var GalleryElement = /** @class */ (function () {
     function GalleryElement(title, content, modelRef) {
         this.title = title;
@@ -5,6 +6,10 @@ var GalleryElement = /** @class */ (function () {
         this.modelRef = modelRef;
         this.createGalleryElement = function () {
             var gallery = document.getElementById("model-feed");
+            if (gallery === null) {
+                console.error("Model feed section not found.");
+                return;
+            }
             var model = document.createElement("div");
             model.classList.add("model");
             var modelTitle = document.createElement("h2");

@@ -1,3 +1,4 @@
+"use strict";
 function blogBack() {
     window.history.back();
 }

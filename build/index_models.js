@@ -39,11 +39,15 @@ var selectedModel = "./models/winston.gltf";
 var maxIdx = 2;
 var currentIdx = Math.floor(Math.random() * (maxIdx + 1));
 var btnPrevModel = document.getElementById("btn-mdl-prev");
-btnPrevModel.addEventListener("click", function (_event) {
-    previousModel();
-});
+if (btnPrevModel) {
+    btnPrevModel.addEventListener("click", function (_event) {
+        previousModel();
+    });
+}
 var btnNextModel = document.getElementById("btn-mdl-next");
-btnNextModel.addEventListener("click", function (_event) {
-    nextModel();
-});
+if (btnNextModel) {
+    btnNextModel.addEventListener("click", function (_event) {
+        nextModel();
+    });
+}
 loadModel(currentIdx);

@@ -31,6 +31,11 @@ function loadMotd(idx: number) {
     randomMotd(idx);
     var container = document.getElementById("motd-holder");
 
+    if (container === null) {
+        console.error("MOTD section not found.");
+        return;
+    }
+
     var motdHolder = document.createElement("p");
     var motdHolderText = document.createTextNode(motd);
 

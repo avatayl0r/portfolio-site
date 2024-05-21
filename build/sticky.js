@@ -1,3 +1,4 @@
+"use strict";
 window.onscroll = function () { stickyHandler(); };
 var header = document.getElementById("nav-bar");
 if (header) {
@@ -5,7 +6,9 @@ if (header) {
 }
 function stickyHandler() {
     if (window.scrollY > sticky) {
-        header.classList.add("sticky");
+        if (header) {
+            header.classList.add("sticky");
+        }
     }
     else {
         if (header) {

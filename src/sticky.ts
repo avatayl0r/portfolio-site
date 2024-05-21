@@ -8,7 +8,9 @@ if(header) {
 
 function stickyHandler() {
     if(window.scrollY > sticky) {
-        header.classList.add("sticky");
+        if (header) {
+            header.classList.add("sticky");
+        }
     } else{
         if(header) {
             header.classList.remove("sticky");

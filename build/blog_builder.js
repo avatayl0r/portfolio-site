@@ -1,5 +1,10 @@
+"use strict";
 function createBlogElement(title, authorMetadata, content, img, ref) {
     var blogFeed = document.getElementById("blog-feed");
+    if (blogFeed === null) {
+        console.error("Blog feed section not found.");
+        return;
+    }
     var blog = document.createElement("div");
     blog.classList.add("blog");
     var blogTitle = document.createElement("h2");

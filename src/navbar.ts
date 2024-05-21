@@ -1,5 +1,11 @@
 function createNavBarElement(name: string, ref: string) {
     var nbar = document.getElementById("nbar");
+
+    if (nbar === null) {
+        console.error("NavBar section not found.");
+        return;
+    }
+
     var element = document.createElement("li");
     element.classList.add("nbar-el");
 
@@ -15,6 +21,12 @@ function createNavBarElement(name: string, ref: string) {
 
 function createNavBarIcon(icon: string, ref: string) {
     var nbar = document.getElementById("nbar");
+
+    if (nbar === null) {
+        console.error("NavBar section not found.");
+        return;
+    }
+
     var element = document.createElement("li");
     element.classList.add("nbar-el");
 

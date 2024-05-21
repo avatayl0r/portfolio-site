@@ -1,5 +1,10 @@
+"use strict";
 function createNavBarElement(name, ref) {
     var nbar = document.getElementById("nbar");
+    if (nbar === null) {
+        console.error("NavBar section not found.");
+        return;
+    }
     var element = document.createElement("li");
     element.classList.add("nbar-el");
     var elementAttr = document.createElement("a");
@@ -12,6 +17,10 @@ function createNavBarElement(name, ref) {
 }
 function createNavBarIcon(icon, ref) {
     var nbar = document.getElementById("nbar");
+    if (nbar === null) {
+        console.error("NavBar section not found.");
+        return;
+    }
     var element = document.createElement("li");
     element.classList.add("nbar-el");
     var elementAttr = document.createElement("a");

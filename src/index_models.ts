@@ -45,13 +45,17 @@ var maxIdx = 2;
 var currentIdx = Math.floor(Math.random() * (maxIdx + 1));
 
 let btnPrevModel = document.getElementById("btn-mdl-prev");
-btnPrevModel.addEventListener("click", _event => {
-    previousModel();
-});
+if (btnPrevModel) {
+    btnPrevModel.addEventListener("click", _event => {
+        previousModel();
+    });
+}
 
 let btnNextModel = document.getElementById("btn-mdl-next");
-btnNextModel.addEventListener("click", _event => {
-    nextModel();
-});
+if (btnNextModel) {
+    btnNextModel.addEventListener("click", _event => {
+        nextModel();
+    });
+}
 
 loadModel(currentIdx);

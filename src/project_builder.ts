@@ -1,5 +1,11 @@
 function createProjectElement(title: string, authorMetadata: string, content: string, img: string, ref: string) {
     let projectFeed = document.getElementById("projects");
+
+    if (projectFeed === null) {
+        console.error("Project feed section not found.");
+        return;
+    }
+
     let project = document.createElement("div");
     project.classList.add("project");
 

@@ -1,5 +1,10 @@
+"use strict";
 function createProjectElement(title, authorMetadata, content, img, ref) {
     var projectFeed = document.getElementById("projects");
+    if (projectFeed === null) {
+        console.error("Project feed section not found.");
+        return;
+    }
     var project = document.createElement("div");
     project.classList.add("project");
     var projectTitle = document.createElement("h2");
