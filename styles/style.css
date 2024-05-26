@@ -1,0 +1,160 @@
+html {
+    scroll-behavior: smooth;
+    animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-stretch: condensed;
+    color: rgb(0, 0, 0);
+    background-color: rgb(235, 235, 235);
+}
+
+h1,h2,h3,h4,h5,h6,ul,p {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.header-container {
+    background-color: rgb(235, 235, 235);
+    margin-top: 5%;
+}
+
+.header-text {
+    text-align: center;
+    line-height: 15px;
+}
+
+#viewport {
+    text-align: center;
+}
+
+#blog-feed {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(10%, auto);
+}
+
+.sticky {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+}
+
+.nbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(235, 235, 235);
+}
+
+.nbar-el {
+    float: left;
+}
+
+.nbar-el-a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nbar-el-a-img {
+    margin-top: 5px;
+    max-height: 35px;
+}
+
+.nbar-el-a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-title {
+    text-align: center;
+}
+
+.footer-arrow {
+    width: 10%;
+    height: 10%;
+    color: rgb(0, 0, 0);
+}
+
+.footer-el {
+    width: 15%;
+    display: inline-block;
+}
+
+.footer-el-a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer-el-a:hover {
+    text-decoration: underline;
+}
+
+.column {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 0;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.project-img {
+    height: 50%;
+    width: 50%;
+}
+
+.project-img-container {
+    text-align: center;
+}
+
+.blog-img {
+    height: 50%;
+    width: 50%;
+}
+
+.blog-img-container {
+    text-align: center;
+}
+
+.aboutme-img-container {
+    text-align: center;
+}
+
+.aboutme-img {
+    width: 25%;
+    height: 25%;
+    border: white;
+    border-style: inset;
+}
+
+#motd-holder {
+    text-align: center;
+    color: rgb(84, 84, 84);
+}

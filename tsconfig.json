@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ES6",
+        "target": "es5",
+        "allowJs": true,
+        "outDir": "./build",
+        "moduleResolution": "Node",
+        "noUnusedLocals": false,
+    },
+    "include":
+    [
+        "src/**/*.ts",
+        "tests/**/*.ts"
+, "src/index_models.js", "src/engine.js"    ],
+    "exclude":
+    [
+        "node_modules",
+        ".vscode"
+    ]
+}

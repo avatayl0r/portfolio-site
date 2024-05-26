@@ -1,0 +1,104 @@
+/* This button style is for small buttons */
+
+.btn-sml-anchor {
+    flex-direction:column;
+    text-align: center;
+    scale: 75%;
+}
+
+.btn-sml-container {
+    display: flex;
+    gap: 20%;
+}
+
+.btn-sml {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-sml:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+.btn-sml:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.btn-sml:disabled {
+    pointer-events: none;
+}
+
+.btn-lrg-anchor {
+    text-align: center;
+}
+
+.btn-lrg-container {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.btn-lrg {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+  }
+
+.btn-lrg:hover {
+box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+.btn-lrg:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.btn-lrg:disabled {
+    pointer-events: none;
+}

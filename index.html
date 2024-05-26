@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Ava Taylor</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/button_styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/icon.jpg">
+    <script type="text/javascript" src="build/navbar.js" defer></script>
+    <script type="text/javascript" src="build/sticky.js"></script>
+    <script type="text/javascript" src="build/motd.js" defer></script>
+    <script type="text/javascript" src="build/footer.js" defer></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.155.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.155.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="build/engine.js"></script>
+    <script type="module" src="build/index_models.js"></script>
+  </head>
+  <body>
+    <div id="top"></div>
+    <div class="sticky" id="nav-bar">
+      <ul class="nbar" id="nbar">
+      </ul>
+    </div>
+    <div class="header-container">
+      <div class="header-text">
+        <h1>Ava Taylor</h1>
+        <p>Pipeline Developer (SWE) @ Oliver Agency</p>
+        <hr>
+      </div>
+    </div>
+    <div id="motd-holder">
+    </div>
+    <div class="btn-sml-anchor">
+      <div class="btn-sml-container">
+        <button class="btn-sml" id="btn-mdl-prev">Previous Model</button>
+        <button class="btn-sml" id="btn-mdl-next">Next Model</button>
+      </div>
+    </div>
+    <div id="viewport"></div>
+    <div class="footer" id="footer-section"></div>
+  </body>
+</html>
