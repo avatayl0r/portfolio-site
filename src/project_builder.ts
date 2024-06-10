@@ -65,11 +65,11 @@ function createProjectElement(title: string, authorMetadata: string, content: st
 
 
 createProjectElement(
-    "ava-taylor.com",
+    "HOMELAB - a Linux Powered Home Server",
     "(Active) August 2023 - Present",
-    "This is my portfolio site, and my first ever feature complete site built from scratch using JavaScript, NodeJS, ThreeJS, HTML, and CSS.<br>I aim to use this site for showcasing my work, updating and logging my resume, having a somewhat reflective about me section, a blog for blogging my various development projects, and a gallery of my 3D models, texturing, materials, shaders, and more.<br>The site is still early in development, and will be consistently being updated.<br>If you are interested in learning more about this journey, please see the Blogs section to read more!",
-    "./images/blog_cover001.png",
-    "https://github.com/avatayl0r/portfolio-site");
+    "I built a home server running Linux to serve as an File Server, a host for my PostgreSQL databases, and a remote machine for Linux-based work across SSH & RDC.",
+    "./images/homelab01.png",
+    "");
 
 createProjectElement(
     "easyRip - A Media Downloader Tool",
