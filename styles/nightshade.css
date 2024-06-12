@@ -1,19 +1,23 @@
 html {
     scroll-behavior: smooth;
     animation: fadeIn 0.8s;
+    background: #000000;
+    background-image: url("../images/bg_viz.png");
+    background-size: contain;
+    background-repeat: repeat-y;
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}
 
 body {
-    font-family: "Rubik", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-optical-sizing: auto;
     font-stretch: condensed;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    background: rgb(21, 21, 21, 0);
 }
 
 h1,h2,h3,h4,h5,h6,ul,p {
@@ -21,14 +25,26 @@ h1,h2,h3,h4,h5,h6,ul,p {
     margin-left: 25%;
 }
 
+svg {
+    width: 100%;
+    left: 0;
+}
+
 .header-container {
-    background-color: rgb(0, 0, 0);
     margin-top: 5%;
 }
 
 .header-text {
     text-align: center;
     line-height: 15px;
+}
+
+.header-text h1 {
+    color: white;
+}
+
+.header-text p {
+    color: greenyellow;
 }
 
 #viewport {
@@ -43,21 +59,24 @@ h1,h2,h3,h4,h5,h6,ul,p {
 
 .sticky {
     position: fixed;
+    left: 0;
     z-index: 999;
     top: 0;
     width: 100%;
+    margin: 0;
 }
 
 .nbar {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 15px 15px;
     overflow: hidden;
-    background-color: rgb(15, 11, 13);
+    background: black;
 }
 
 .nbar-el {
     float: left;
+    padding: 0px 15px;
 }
 
 .nbar-el-a {
@@ -70,11 +89,20 @@ h1,h2,h3,h4,h5,h6,ul,p {
 
 .nbar-el-a-img {
     margin-top: 5px;
-    max-height: 35px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    scale: 150%;
+}
+
+.nbar-el-a-img:hover {
+    scale: 200%;
 }
 
 .nbar-el-a:hover {
     text-decoration: underline;
+    color: greenyellow;
+    scale: 130%;
 }
 
 .footer {
@@ -110,6 +138,8 @@ h1,h2,h3,h4,h5,h6,ul,p {
 
 .footer-el-a:hover {
     text-decoration: underline;
+    color: greenyellow;
+    scale: 130%;
 }
 
 .column {
@@ -124,6 +154,23 @@ h1,h2,h3,h4,h5,h6,ul,p {
     display: table;
     clear: both;
 }
+
+.blog h2 {
+    color: greenyellow;
+}
+
+.blog h4 {
+    color: orange;
+}
+
+.project h2 {
+    color: greenyellow;
+}
+
+.project h4 {
+    color: orange;
+}
+
 
 .project-img {
     height: 50%;
@@ -144,17 +191,36 @@ h1,h2,h3,h4,h5,h6,ul,p {
 }
 
 .aboutme-img-container {
-    text-align: center;
+    margin-left: 25%;
+    margin-right: 20%;
 }
 
 .aboutme-img {
-    width: 25%;
-    height: 25%;
-    border: white;
-    border-style: inset;
+    width: 20%;
+    height: 20%;
+    border: 5px greenyellow;
+    border-style: ridge;
 }
 
 #motd-holder {
     text-align: center;
-    color: rgb(84, 84, 84);
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+
+.summary-container {
+    text-align: center;
+}
+
+.summary {
+    background-color: #000000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.summary-highlight {
+    color: greenyellow;
+    scale: 130%;
+    background-color: #000000;
+
 }

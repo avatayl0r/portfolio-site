@@ -45,14 +45,14 @@ var loc = window.location.pathname;
 var dir = loc.substring(0, loc.lastIndexOf('/'));
 console.log(dir);
 if (dir == "") {
-    createNavBarIcon("./images/home.png", "./index.html");
+    createNavBarIcon("./images/home_ava.png", "./index.html");
     createNavBarElement("Home", "./index.html");
     createNavBarElement("About Me", "./aboutme.html");
     createNavBarElement("Projects", "./projects.html");
     createNavBarElement("Resume", "./resume.html");
     createNavBarElement("Blog", "./blog.html");
 } else {
-    createNavBarIcon("../images/home.png", "../index.html");
+    createNavBarIcon("../images/home_ava.png", "../index.html");
     createNavBarElement("Home", "../index.html");
     createNavBarElement("About Me", "../aboutme.html");
     createNavBarElement("Projects", "../projects.html");
