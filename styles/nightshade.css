@@ -57,6 +57,14 @@ svg {
     grid-auto-rows: minmax(10%, auto);
 }
 
+#blog-content h2 {
+    color: greenyellow;
+}
+
+#blog-content h4 {
+    color: orange;
+}
+
 .sticky {
     position: fixed;
     left: 0;
